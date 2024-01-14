@@ -3,8 +3,12 @@ import SideNav from "../../Component/Navbar/SideNav";
 
 const Home = () => {
   return (
-    <div>
-      <SideNav />
+    <div className="MainContainer">
+      <div className="item Header">Header</div>
+      <div className="item SideBar">
+        <SideNav />
+      </div>
+      <div className="item Content">Content</div>
     </div>
   );
 };

@@ -10,139 +10,165 @@ import myPrivileges_icon from "../../Images/myPrivileges_icon.png";
 import service_icon from "../../Images/service_icon.png";
 import setting_icon from "../../Images/setting_icon.png";
 import transaction_icon from "../../Images/transaction_icon.png";
-// import * as images from "../../Images";
+import accounts_blue_icon from "../../ImagesBlue/accounts_blue_icon.png";
+import dashboard_blue_icon from "../../ImagesBlue/dashboard_blue_icon.png";
+import transaction_blue_icon from "../../ImagesBlue/transaction_blue_icon.png";
 
 const SideNav = () => {
-  const [selected, setSelected] = useState("Dashboard");
+  const [isselected, setIsSelected] = useState("Dashboard");
 
-  const functionColorChange = (param) => {
-    setSelected(param);
+  const handleClicked = (param) => {
+    setIsSelected(param);
   };
 
   return (
-    <div className="sidenav">
-      <div className="iconfinder_1">
-        <img src={iconfinder_1} alt="iconfinder" />
-        <h2>BankDash.</h2>
-      </div>
-      <div className="sidenavOption">
-        <div className="Option">
-          <ul className="OptionList_UL">
-            <li
-              style={
-                selected === "Dashboard" ? { borderLeft: "2px solid blue" } : {}
-              }
-              onClick={() => functionColorChange("Dashboard")}
-              className="list A"
-            >
-              <img src={dashboard_icon} alt="dashboard_icon" />
-              <p style={selected === "Dashboard" ? { color: "blue" } : {}}>
-                Dashboard
-              </p>
-            </li>
-            <li
-              style={
-                selected === "Transaction"
-                  ? { borderLeft: "2px solid blue" }
-                  : {}
-              }
-              onClick={() => functionColorChange("Transaction")}
-              className="list B"
-            >
-              <img src={transaction_icon} alt="transaction_icon" />
-              <p style={selected === "Transaction" ? { color: "blue" } : {}}>
-                Transaction
-              </p>
-            </li>
-            <li
-              style={
-                selected === "Accounts" ? { borderLeft: "2px solid blue" } : {}
-              }
-              onClick={() => functionColorChange("Accounts")}
-              className="list C"
-            >
-              <img src={account_icon} alt="account_icon" />
-              <p style={selected === "Accounts" ? { color: "blue" } : {}}>
-                Accounts
-              </p>
-            </li>
-            <li
-              style={
-                selected === "Investments"
-                  ? { borderLeft: "2px solid blue" }
-                  : {}
-              }
-              onClick={() => functionColorChange("Investments")}
-              className="list D"
-            >
-              <img src={investment_icon} alt="investment_icon" />
-              <p style={selected === "Investments" ? { color: "blue" } : {}}>
-                Investments
-              </p>
-            </li>
-            <li
-              style={
-                selected === "Credit" ? { borderLeft: "2px solid blue" } : {}
-              }
-              onClick={() => functionColorChange("Credit")}
-              className="list E"
-            >
-              <img src={credit_card_icon} alt="credit_card_icon" />
-              <p style={selected === "Credit" ? { color: "blue" } : {}}>
-                Credit Cards
-              </p>
-            </li>
-            <li
-              style={
-                selected === "Loans" ? { borderLeft: "2px solid blue" } : {}
-              }
-              onClick={() => functionColorChange("Loans")}
-              className="list F"
-            >
-              <img src={loan_icon} alt="loan_icon" />
-              <p style={selected === "Loans" ? { color: "blue" } : {}}>Loans</p>
-            </li>
-            <li
-              style={
-                selected === "Services" ? { borderLeft: "2px solid blue" } : {}
-              }
-              onClick={() => functionColorChange("Services")}
-              className="list G"
-            >
-              <img src={service_icon} alt="service_icon" />
-              <p style={selected === "Services" ? { color: "blue" } : {}}>
-                Services
-              </p>
-            </li>
-            <li
-              style={
-                selected === "Privileges"
-                  ? { borderLeft: "2px solid blue" }
-                  : {}
-              }
-              onClick={() => functionColorChange("Privileges")}
-              className="list H"
-            >
-              <img src={myPrivileges_icon} alt="myPrivileges_icon" />
-              <p style={selected === "Privileges" ? { color: "blue" } : {}}>
-                My Privileges
-              </p>
-            </li>
-            <li
-              style={
-                selected === "Setting" ? { borderLeft: "2px solid blue" } : {}
-              }
-              onClick={() => functionColorChange("Setting")}
-              className="list I"
-            >
-              <img src={setting_icon} alt="setting_icon" />
-              <p style={selected === "Setting" ? { color: "blue" } : {}}>
-                Setting
-              </p>
-            </li>
-          </ul>
+    <div className="SideNav">
+      {/* new Line  */}
+      {isselected === "Dashboard" ? (
+        <div
+          className="dashboardMainDiv"
+          onClick={() => handleClicked("Dashboard")}
+        >
+          <div className="sidebars"></div>
+          <div className="dashboard">
+            <img
+              className="img dashboardImg"
+              src={dashboard_blue_icon}
+              alt="dashboard_blue_icon"
+            />
+            <p style={{ color: "#2D60FF" }}>Dashboard</p>
+          </div>
+        </div>
+      ) : (
+        <div
+          className="dashboardMainDiv"
+          onClick={() => handleClicked("Dashboard")}
+        >
+          <div className="sidebar"></div>
+          <div className="dashboard">
+            <img
+              className="img dashboardImg"
+              src={dashboard_icon}
+              alt="dashboard_icon"
+            />
+            <p>Dashboard</p>
+          </div>
+        </div>
+      )}
+      {/* new Line  */}
+      {isselected === " Transaction" ? (
+        <div
+          className="dashboardMainDiv"
+          onClick={() => handleClicked("Transaction")}
+        >
+          <div className="sidebars"></div>
+          <div className="dashboard">
+            <img
+              className="img dashboardImg"
+              src={transaction_blue_icon}
+              alt="transaction_blue_icon"
+            />
+            <p style={{ color: "#2D60FF" }}>Transaction</p>
+          </div>
+        </div>
+      ) : (
+        <div
+          className="dashboardMainDiv"
+          onClick={() => handleClicked("Transaction")}
+        >
+          <div className="sidebar"></div>
+          <div className="dashboard">
+            <img
+              className="img dashboardImg"
+              src={transaction_icon}
+              alt="transaction_icon"
+            />
+            <p>Transaction</p>
+          </div>
+        </div>
+      )}
+      {/* new Line  */}
+      <div className="dashboardMainDiv">
+        <div className="sidebar"></div>
+        <div className="dashboard">
+          <img
+            className="img dashboardImg"
+            src={transaction_icon}
+            alt="transaction_icon"
+          />
+          <p>Accounts</p>
         </div>
       </div>
+
+      {/* new Line  */}
+      <div className="dashboardMainDiv">
+        <div className="sidebar"></div>
+        <div className="dashboard">
+          <img
+            className="img dashboardImg"
+            src={investment_icon}
+            alt="investment_icon"
+          />
+          <p>Investments</p>
+        </div>
+      </div>
+      {/* new Line  */}
+      <div className="dashboardMainDiv">
+        <div className="sidebar"></div>
+        <div className="dashboard">
+          <img
+            className="img dashboardImg"
+            src={credit_card_icon}
+            alt="credit_card_icon"
+          />
+          <p>Credit Cards</p>
+        </div>
+      </div>
+      {/* new Line  */}
+      <div className="dashboardMainDiv">
+        <div className="sidebar"></div>
+        <div className="dashboard">
+          <img className="img dashboardImg" src={loan_icon} alt="loan_icon" />
+          <p>Loans</p>
+        </div>
+      </div>
+      {/* new Line  */}
+      <div className="dashboardMainDiv">
+        <div className="sidebar"></div>
+        <div className="dashboard">
+          <img
+            className="img dashboardImg"
+            src={service_icon}
+            alt="service_icon"
+          />
+          <p>Services</p>
+        </div>
+      </div>
+      {/* new Line  */}
+      <div className="dashboardMainDiv">
+        <div className="sidebar"></div>
+        <div className="dashboard">
+          <img
+            className="img dashboardImg"
+            src={myPrivileges_icon}
+            alt="myPrivileges_icon"
+          />
+          <p>My Privileges</p>
+        </div>
+      </div>
+      {/* new Line  */}
+      <div className="dashboardMainDiv">
+        <div className="sidebar"></div>
+        <div className="dashboard">
+          <img
+            className="img dashboardImg"
+            src={setting_icon}
+            alt="setting_icon"
+          />
+          <p>Setting</p>
+        </div>
+      </div>
+      {/* new Line  */}
     </div>
   );
 };

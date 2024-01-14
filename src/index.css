@@ -2,72 +2,95 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
 }
 
 body {
-  background-color: #eee;
-}
-
-.sidenav {
-  background-color: chocolate;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  /* align-items: center; */
-  width: 250px;
   height: 100vh;
+  width: 100vw;
 }
 
-.iconfinder_1 {
-  background-color: antiquewhite;
-  width: 183px;
-  height: 36px;
+.MainContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(171, 195, 195);
+  display: grid;
+  border: 2px solid rgb(115, 107, 107);
+  gap: 0.25rem;
+  grid-template-columns: 1fr 3fr 4fr;
+  grid-template-rows: 1fr 4fr 4fr;
+}
+
+.item {
+  background-color: rgb(94, 94, 175);
+  border: 2px solid black;
   display: flex;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
-  color: #343c6a;
-  justify-content: space-between;
-  /* margin-bottom: 10px; */
-  margin-top: 31px;
-  margin-left: 38px;
+  /* justify-content: center;
+  align-items: center; */
 }
 
-.sidenavOption {
-  background-color: honeydew;
-  width: 211px;
-  height: 554px;
-  margin-top: calc(114px - 67px);
-}
-.Option {
-  background-color: aqua;
-  height: 554px;
-  padding-left: 44px;
+.Header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: 101px;
 }
 
-.OptionList_UL {
+.SideBar {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  width: 250px;
   display: flex;
-  flex-direction: column;
-  gap: 1px;
-  background-color: bisque;
 }
 
-.list {
-  list-style: none;
-  display: flex;
-  /* margin-bottom: 30px; */
-  gap: 15px;
-  align-items: center;
-  background-color: yellow;
+.Content {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.SideNav {
+  /* display: flex; */
+  padding: 1px;
+  border: 1px solid red;
+  flex-wrap: wrap;
+  width: 250px;
+}
+
+.dashboardMainDiv {
+  border: 2px solid green;
+  width: 241px;
   height: 60px;
+  display: flex;
+  margin-bottom: 5px;
 }
 
-/* .A {
-  background-color: yellow;
-  gap: 15px;
-  align-items: center;
-} */
+.sidebar {
+  border-right: 5px solid white;
+  border-radius: 5px;
+  display: flex;
+}
 
-.BlueColoronClick {
-  color: #2d60ff;
+.sidebars {
+  border-right: 5px solid #2d60ff;
+  border-radius: 5px;
+  display: flex;
+}
+
+.dashboard {
+  border: 1px solid yellow;
+  margin-left: 44px;
+  width: 188px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.img {
+  margin-right: 25px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
 }
