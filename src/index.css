@@ -47,6 +47,7 @@ body {
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 4;
+  background-color: #edf1f7;
 }
 
 .SideNav {
@@ -179,6 +180,7 @@ p {
   display: flex;
   /* background-color: antiquewhite; */
   width: 100%;
+  flex-direction: column;
 }
 
 .MyCards {
@@ -187,10 +189,11 @@ p {
   height: 282px;
   display: flex;
   flex-direction: column;
+  width: 730px;
 }
 
 .MyCards_heading {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -199,7 +202,6 @@ p {
 .head {
   font-family: "Inter", sans-serif;
   font-weight: 600;
-
   color: #343c6a;
 }
 
@@ -222,7 +224,7 @@ p {
 }
 
 .card-1 {
-  border: 2px solid gray;
+  /* border: 2px solid gray; */
   width: 350px;
   height: 235px;
   padding: 25px;
@@ -230,15 +232,16 @@ p {
   background-color: rgb(60, 60, 180);
 }
 .card-2 {
-  border: 2px solid rgb(231, 64, 64);
+  border: 1px solid #dfeaf2;
   width: 350px;
   height: 235px;
   padding: 25px;
   border-radius: 25px;
+  background-color: white;
 }
 
 .balance_chip_bar {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -263,4 +266,219 @@ h4 {
   /* border: 1px solid green; */
   display: flex;
   align-items: center;
+}
+
+.cardHolderSection {
+  /* border: 1px solid green; */
+  margin-top: 40px;
+  width: 227px;
+  height: 34.89px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Card_Holder {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #b8b2b2;
+  font-size: 11px;
+  line-height: 14.4px;
+}
+.Name {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.CardNumberSection {
+  /* border: 1px solid orange; */
+  display: flex;
+  height: 70px;
+  margin-top: 23px;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 44px;
+  height: 30px; */
+  /* padding: 15px 0px; */
+}
+
+.NameNumber {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.Bal {
+  color: #718ebf;
+}
+
+.Card_Holder1 {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #718ebf;
+  font-size: 11px;
+  line-height: 14.4px;
+}
+
+.Name1 {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #343c6a;
+}
+
+.NameNumber1 {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #343c6a;
+}
+
+.Transaction_Page {
+  width: 50rem;
+  height: 282px;
+  border: 1px solid saddlebrown;
+  margin-left: 2rem;
+}
+
+.Transaction_Heading_Section {
+  border: 1px solid black;
+}
+.Transaction_History {
+  width: 49.9rem;
+  margin-top: 15px;
+}
+
+.historySection {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.history-1 {
+  margin-bottom: 10px;
+}
+
+.history-2 {
+  margin-bottom: 10px;
+}
+
+.history_icon {
+  width: 55px;
+  height: 55px;
+}
+
+.price {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+}
+
+.Price1 {
+  color: #ff4b4a;
+  margin-left: 22rem;
+}
+.Price2 {
+  margin-left: 25rem;
+  color: #41d4a8;
+}
+
+.Price3 {
+  margin-left: 25rem;
+  color: #41d4a8;
+}
+
+.TopSection {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.MiddleSection {
+  width: 100%;
+  border: 1px solid skyblue;
+  height: 20rem;
+  display: flex;
+  gap: 25px;
+}
+
+.GraphSec-1 {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.GraphSec-2 {
+  border: 1px solid blue;
+  width: 70%;
+  height: 100%;
+}
+.Gsec-1 {
+  border: 1px solid rgb(42, 42, 60);
+  flex: 1;
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  color: #343c6a;
+}
+.Gsec-2 {
+  border: 1px solid rgb(178, 226, 189);
+  flex: 5;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.Gsec-2A {
+  border: 1px solid hotpink;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: flex-end;
+}
+.Gsec-2B {
+  border: 1px solid hotpink;
+  flex: 5;
+  padding: 10px 28px;
+  display: flex;
+  justify-content: end;
+}
+
+.ellipseBox {
+  border: 1px solid rgb(242, 205, 95);
+  width: 150px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.PinkDot {
+  background-color: #ff82ac;
+}
+.GreenDot {
+  background-color: #16dbcc;
+}
+.DW {
+  color: #718ebf;
 }
