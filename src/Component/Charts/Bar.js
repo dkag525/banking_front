@@ -25,6 +25,9 @@ export const options = {
       display: true,
       //   text: "Chart.js Bar Chart - Stacked",
     },
+    legend: {
+      display: false,
+    },
   },
   responsive: true,
   scales: {
@@ -35,6 +38,9 @@ export const options = {
       //   stacked: true,
     },
   },
+  maintainAspectRatio: false, // Add this line to allow setting width and height directly
+  width: 100, // Set the width of the chart
+  // height: 400, // Set the height of the chart
 };
 
 const labels = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
@@ -43,7 +49,7 @@ export const data = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
+      // label: "Dataset 1",   // to Remove this i Setted display : false
       data: [480, 350, 340, 480, 115, 390, 400],
       backgroundColor: "rgb(45,96,255)",
       borderRadius: {
@@ -54,7 +60,7 @@ export const data = {
       },
     },
     {
-      label: "Dataset 2",
+      // label: "Dataset 2",   // to Remove this i Setted display : false
       data: [220, 115, 290, 380, 215, 210, 310],
       backgroundColor: "rgb(65,212,168)",
       borderRadius: {

@@ -1,5 +1,6 @@
 import React from "react";
 import { BarChart } from "../../Charts/Bar";
+import { PieChart } from "../../Charts/PieChart";
 
 const MiddleSection = () => {
   return (
@@ -22,7 +23,9 @@ const MiddleSection = () => {
           </div>
         </div>
       </div>
-      <div className="GraphSec-2">B</div>
+      <div className="GraphSec-2">
+        <PieChart />
+      </div>
     </div>
   );
 };

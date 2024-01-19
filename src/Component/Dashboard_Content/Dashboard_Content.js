@@ -3,6 +3,7 @@ import Card1 from "./mycard/card1";
 import Card2 from "./mycard/card2";
 import RecentTransaction from "./RecentTransaction/RecentTransaction";
 import MiddleSection from "./MiddleSection/MiddleSection";
+import BottomSection from "./BottomSection/BottomSection";
 
 const Dashboard_Content = () => {
   return (
@@ -28,6 +29,9 @@ const Dashboard_Content = () => {
       </div>
       <div>
         <MiddleSection />
+      </div>
+      <div>
+        <BottomSection />
       </div>
     </div>
   );
