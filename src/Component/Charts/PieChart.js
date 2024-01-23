@@ -10,15 +10,11 @@ export const data = {
 
   datasets: [
     {
-      data: [15, 35, 20, 30],
+      data: [30, 15, 35, 20],
       backgroundColor: ["#FA00FF", "#1814F3", "#FC7900", "#343C6A"],
-      borderColor: [
-        "rgba(255, 99, 132, 1)",
-        "rgba(54, 162, 235, 1)",
-        "rgba(255, 206, 86, 1)",
-        "rgba(75, 192, 192, 1)",
-      ],
-      borderWidth: 1,
+      borderColor: ["#f5f7fa", "#f5f7fa", "#f5f7fa", "#f5f7fa"],
+      borderWidth: 10,
+      hoverOffset: 10, // Additional spacing on hover
     },
   ],
 };
@@ -41,13 +37,44 @@ export const options = {
     datalabels: {
       color: "#fff", // Font color for the values
       anchor: "center", // Position of the values inside the pie chart
-      align: "right", // Alignment of the values inside the pie chart
-      fontWeight: "bolder", // Font weight for the values
+      align: "end", // Alignment of the values inside the pie chart
+      font: {
+        size: 14,
+        // weight: "bolder",
+        // family: "mono",
+      }, // Font size for the values
+      offset: -25, // Offset from the data point
+      rotation: 10, // Rotation angle in degrees
+      clamp: true, // Ensure labels do not overflow
       formatter: (value, context) => {
-        return [context.chart.data.labels[context.dataIndex], value];
+        return [context.chart.data.labels[context.dataIndex], value + "%"];
       },
+      // backgroundColor: "red", // Background color for the data labels
+      // borderRadius: 5, // Border radius for the data labels
+      // borderWidth: 1, // Border width for the data labels
+      // borderColor: "green", // Border color for the data labels
+      // clip: true, // Clips the data labels to the chart area
+      // zIndex: 1, // Z-index of the data labels
     },
   },
+  // elements: {
+  //   arc: {
+  //     borderWidth: 1,
+  //     borderColor: "green",
+  //     innerRadius: 0, // Inner radius for a doughnut chart
+  //   },
+  // },
+  // hover: {
+  //   mode: "single", // Hover mode for the chart
+  // },
+  animation: {
+    animateRotate: true, // Animate rotation during initial rendering
+    animateScale: true, // Animate scaling during initial rendering
+  },
+
+  rotation: 5 * Math.PI, // Rotate pie chart by 90 degrees
+  circumference: 115 * Math.PI, // Full circumference
+  cutout: 0, // Create a doughnut chart with a center hole
 };
 
 export function PieChart() {
