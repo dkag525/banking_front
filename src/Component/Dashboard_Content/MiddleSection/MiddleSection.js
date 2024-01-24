@@ -24,7 +24,10 @@ const MiddleSection = () => {
         </div>
       </div>
       <div className="GraphSec-2">
-        <PieChart />
+        <div className="expenseStatics Gsec-1">Expense Statistics</div>
+        <div className="expenseStaticsGraph">
+          <PieChart />
+        </div>
       </div>
     </div>
   );

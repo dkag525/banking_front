@@ -15,7 +15,7 @@ body {
   width: 100vw;
   /* background-color: rgb(171, 195, 195); */
   display: grid;
-  border: 2px solid rgb(115, 107, 107);
+  /* border: 2px solid rgb(115, 107, 107); */
   gap: 0.25rem;
   grid-template-columns: 1fr 3fr 4fr;
   grid-template-rows: 1fr 4fr 4fr;
@@ -23,7 +23,7 @@ body {
 
 .item {
   /* background-color: rgb(94, 94, 175); */
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
   /* justify-content: center;
   align-items: center; */
@@ -33,6 +33,7 @@ body {
   grid-column-start: 1;
   grid-column-end: 4;
   height: 101px;
+  /* border: 1px solid bisque; */
 }
 
 .SideBar {
@@ -185,7 +186,7 @@ p {
 
 .MyCards {
   width: 730px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   height: 282px;
   display: flex;
   flex-direction: column;
@@ -217,7 +218,7 @@ p {
 
 .MyCards_Two_cards {
   padding: 15px 0px 0px 0px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   height: 100%;
   justify-content: space-between;
@@ -344,12 +345,12 @@ h4 {
 .Transaction_Page {
   width: 50rem;
   height: 282px;
-  border: 1px solid saddlebrown;
+  /* border: 1px solid saddlebrown; */
   margin-left: 2rem;
 }
 
 .Transaction_Heading_Section {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .Transaction_History {
   width: 49.9rem;
@@ -403,28 +404,30 @@ h4 {
 
 .MiddleSection {
   width: 100%;
-  border: 1px solid skyblue;
+  /* border: 1px solid skyblue; */
   height: 25rem;
   display: flex;
   gap: 25px;
 }
 
 .GraphSec-1 {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 .GraphSec-2 {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 70%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  overflow: hidden;
 }
 .Gsec-1 {
-  border: 1px solid rgb(42, 42, 60);
+  /* border: 1px solid rgb(42, 42, 60); */
   flex: 1;
   font-size: 22px;
   font-family: "Inter", sans-serif;
@@ -433,7 +436,7 @@ h4 {
   color: #343c6a;
 }
 .Gsec-2 {
-  border: 1px solid rgb(178, 226, 189);
+  /* border: 1px solid rgb(178, 226, 189); */
   flex: 5;
   background-color: white;
   border-radius: 20px;
@@ -442,7 +445,7 @@ h4 {
   flex-direction: column;
 }
 .Gsec-2A {
-  border: 1px solid hotpink;
+  /* border: 1px solid hotpink; */
   flex: 1;
   display: flex;
   align-items: center;
@@ -450,7 +453,7 @@ h4 {
   justify-content: flex-end;
 }
 .Gsec-2B {
-  border: 1px solid hotpink;
+  /* border: 1px solid hotpink; */
   flex: 5;
   padding: 10px 28px;
   display: flex;
@@ -459,7 +462,7 @@ h4 {
 }
 
 .ellipseBox {
-  border: 1px solid rgb(242, 205, 95);
+  /* border: 1px solid rgb(242, 205, 95); */
   width: 150px;
   height: 100%;
   display: flex;
@@ -487,7 +490,7 @@ h4 {
 }
 
 .BottomSection {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   margin-top: 10px;
   height: 25rem;
   display: flex;
@@ -495,7 +498,7 @@ h4 {
 }
 
 .BottomSec_1 {
-  border: #062170 1px solid;
+  /* border: #062170 1px solid; */
   display: flex;
   height: 100%;
   flex: 4;
@@ -504,22 +507,23 @@ h4 {
 
 
 .BottomSec_2 {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   height: 100%;
   flex: 5;
+  flex-direction: column;
 }
 
 
 .transferTop {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     flex:1;
     display: flex;
 
 }
 
 .transferBottom {
-  border: 1px solid rgb(190, 199, 190);
+  /* border: 1px solid rgb(190, 199, 190); */
   flex: 5;
   display: flex;
   background-color: #f5f7fa;
@@ -529,15 +533,24 @@ h4 {
 }
 
 .groupSec{
-  border:1px solid grey;
+  /* border:1px solid grey; */
   display: flex;
   flex: 2;
-  padding: 5px;
   align-items: center;
   padding:0px 20px;
   gap: 20px;
   justify-content: center;
 
+}
+
+.btn{
+   margin-left: 2rem;
+   padding: 20px;
+   border-radius: 50%;
+   border-style: none;
+   box-shadow: 2px 2px 10px 2px rgb(204, 201, 201);
+   /* box-shadow: 2px 2px 10px 2px rgb(178, 222, 239); */
+   cursor: pointer;
 }
 
 
@@ -550,7 +563,7 @@ h4 {
 }
 
 .AmountSec {
-  border:1px solid rgb(94, 75, 75);
+  /* border:1px solid rgb(94, 75, 75); */
   display: flex;
   flex: 1;
   padding: 0px 10px;
@@ -558,7 +571,7 @@ h4 {
 }
 
 .list{
-  border: 1px solid firebrick;
+  /* border: 1px solid firebrick; */
   padding: 15px 0px;
   align-items: center;
   display: flex;
@@ -590,7 +603,7 @@ h4 {
 
 .Amount{
   color: #718EBF;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   font-size: larger;
   font-size: larger;
   align-items: center;
@@ -608,7 +621,7 @@ h4 {
 }
 
 .send{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   font-size: larger;
   padding:10px 45px;
   background-color: blue;
@@ -617,4 +630,41 @@ h4 {
   right: 35px;
   color: white;
   border-style: none;
+  cursor: pointer;
+}
+
+.balHistory{
+  /* border: 1px solid green; */
+  display: flex;
+  flex:1;
+}
+
+.lineGraph{
+  /* border: 1px solid rgb(173, 171, 171); */
+  background-color: white;
+  display: flex;
+  flex:5;
+  border-radius: 5%;
+  /* box-shadow: 1px 1px 1px 1px; */
+  padding: 10px;
+}
+
+.expenseStatics {
+  /* border: 1px solid black; */
+  margin-bottom: 35px;
+  
+}
+
+.expenseStaticsGraph{
+  /* border: 1px solid rgb(195, 156, 156); */
+  /* flex:5; */
+  
+  width: 100%;
+  height: 90%;
+  justify-content: center;
+  display: flex;
+  background-color: white;
+  /* padding-bottom: 15px; */
+  border-radius: 20px;
+  align-items: center;
 }

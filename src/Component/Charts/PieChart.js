@@ -38,6 +38,7 @@ export const options = {
       color: "#fff", // Font color for the values
       anchor: "center", // Position of the values inside the pie chart
       align: "end", // Alignment of the values inside the pie chart
+
       font: {
         size: 14,
         // weight: "bolder",
