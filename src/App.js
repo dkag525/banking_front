@@ -18,18 +18,22 @@ const App = () => {
       <div>
         <TopNav />
       </div>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/transaction" element={<Transactions />} />
-        <Route path="/accounts" element={<Accounts />} />
-        <Route path="/investment" element={<Investments />} />
-        <Route path="/credit_card" element={<Credit_Card />} />
-        <Route path="/loans" element={<Loans />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="*" element={<Errorpage />} />
-      </Routes>
+      <div className="SideNavContainer">
+        <SideNav />
+        <div className="mainContainer">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/transaction" element={<Transactions />} />
+            <Route path="/accounts" element={<Accounts />} />
+            <Route path="/investments" element={<Investments />} />
+            <Route path="/credit_card" element={<Credit_Card />} />
+            <Route path="/loans" element={<Loans />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<Errorpage />} />
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 };

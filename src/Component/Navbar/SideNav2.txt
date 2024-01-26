@@ -1,0 +1,629 @@
+.SideBar {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  width: 250px;
+  display: flex;
+}
+
+.Content {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: #edf1f7;
+  border: 1px solid red;
+}
+
+.SideNav {
+  /* display: flex; */
+  padding: 1px;
+  /* border: 1px solid red; */
+  flex-wrap: wrap;
+  width: 250px;
+}
+
+.dashboardMainDiv {
+  /* border: 2px solid green; */
+  width: 241px;
+  height: 60px;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.sidebar {
+  border-right: 5px solid white;
+  border-radius: 5px;
+  display: flex;
+}
+
+.sidebars {
+  border-right: 5px solid #2d60ff;
+  border-radius: 5px;
+  display: flex;
+}
+
+.dashboard {
+  /* border: 1px solid yellow; */
+  margin-left: 44px;
+  width: 188px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.img {
+  margin-right: 25px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+}
+
+.TopNav {
+  /* border: 2px solid red; */
+  display: flex;
+  width: 100%;
+  padding: 10px 47px;
+  align-items: center;
+}
+
+.Navbar {
+  /* border: 2px solid green; */
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.bankdashimg {
+  display: flex;
+  /* border: 2px solid black; */
+  height: 36px;
+  align-items: center;
+  gap: 5px;
+}
+
+.BankDash {
+  font-family: "Montserrat", sans-serif;
+  color: #062170;
+}
+
+.Navbar_1 {
+  /* border: 1px solid brown; */
+  font-family: "Inter", sans-serif;
+  margin-left: 87px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 5px 0px;
+  /* flex-wrap: nowrap; */
+}
+
+.OverView {
+  /* border: 1px solid forestgreen; */
+  color: #062170;
+}
+
+.Searchbar {
+  /* border: 1px solid hotpink; */
+  display: flex;
+  /* justify-content: center; */
+  height: 100%;
+  width: 255px;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #f5f7fa;
+  padding: 5px 25px;
+  gap: 10px;
+}
+
+.input {
+  /* border: 1px solid red; */
+  font-size: 15px;
+  width: 100%;
+  line-height: 18.15px;
+  font-family: "Inter", sans-serif;
+  border-style: none;
+  background-color: #f5f7fa;
+}
+
+.input::placeholder {
+  color: #2d60ff;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.OverView_page {
+  padding: 25px;
+  display: flex;
+  /* background-color: antiquewhite; */
+  width: 100%;
+  flex-direction: column;
+}
+
+.MyCards {
+  width: 730px;
+  /* border: 1px solid blue; */
+  height: 282px;
+  display: flex;
+  flex-direction: column;
+  width: 730px;
+}
+
+.MyCards_heading {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #343c6a;
+}
+
+.heading-1 {
+  font-size: 22px;
+  line-height: 26.63px;
+}
+
+.heading-2 {
+  font-size: 17px;
+  line-height: 20.57px;
+}
+
+.MyCards_Two_cards {
+  padding: 15px 0px 0px 0px;
+  /* border: 1px solid green; */
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.card-1 {
+  /* border: 2px solid gray; */
+  width: 350px;
+  height: 235px;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: rgb(60, 60, 180);
+}
+.card-2 {
+  border: 1px solid #dfeaf2;
+  width: 350px;
+  height: 235px;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: white;
+}
+
+.balance_chip_bar {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h6 {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+}
+
+h4 {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+}
+
+.chip {
+  /* border: 1px solid green; */
+  display: flex;
+  align-items: center;
+}
+
+.cardHolderSection {
+  /* border: 1px solid green; */
+  margin-top: 40px;
+  width: 227px;
+  height: 34.89px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Card_Holder {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #b8b2b2;
+  font-size: 11px;
+  line-height: 14.4px;
+}
+.Name {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.CardNumberSection {
+  /* border: 1px solid orange; */
+  display: flex;
+  height: 70px;
+  margin-top: 23px;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 44px;
+  height: 30px; */
+  /* padding: 15px 0px; */
+}
+
+.NameNumber {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.Bal {
+  color: #718ebf;
+}
+
+.Card_Holder1 {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #718ebf;
+  font-size: 11px;
+  line-height: 14.4px;
+}
+
+.Name1 {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #343c6a;
+}
+
+.NameNumber1 {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #343c6a;
+}
+
+.Transaction_Page {
+  width: 50rem;
+  height: 282px;
+  /* border: 1px solid saddlebrown; */
+  margin-left: 2rem;
+}
+
+.Transaction_Heading_Section {
+  /* border: 1px solid black; */
+}
+.Transaction_History {
+  width: 49.9rem;
+  margin-top: 15px;
+}
+
+.historySection {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.history-1 {
+  margin-bottom: 10px;
+}
+
+.history-2 {
+  margin-bottom: 10px;
+}
+
+.history_icon {
+  width: 55px;
+  height: 55px;
+}
+
+.price {
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+}
+
+.Price1 {
+  color: #ff4b4a;
+  margin-left: 22rem;
+}
+.Price2 {
+  margin-left: 25rem;
+  color: #41d4a8;
+}
+
+.Price3 {
+  margin-left: 25rem;
+  color: #41d4a8;
+}
+
+.TopSection {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.MiddleSection {
+  width: 100%;
+  /* border: 1px solid skyblue; */
+  height: 25rem;
+  display: flex;
+  gap: 25px;
+}
+
+.GraphSec-1 {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.GraphSec-2 {
+  /* border: 1px solid blue; */
+  width: 70%;
+  height: 100%;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  overflow: hidden;
+}
+.Gsec-1 {
+  /* border: 1px solid rgb(42, 42, 60); */
+  flex: 1;
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  color: #343c6a;
+}
+.Gsec-2 {
+  /* border: 1px solid rgb(178, 226, 189); */
+  flex: 5;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.Gsec-2A {
+  /* border: 1px solid hotpink; */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  justify-content: flex-end;
+}
+.Gsec-2B {
+  /* border: 1px solid hotpink; */
+  flex: 5;
+  padding: 10px 28px;
+  display: flex;
+  justify-content: end;
+  /* overflow: hidden; */
+}
+
+.ellipseBox {
+  /* border: 1px solid rgb(242, 205, 95); */
+  width: 150px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.PinkDot {
+  background-color: #ff82ac;
+}
+.GreenDot {
+  background-color: #16dbcc;
+}
+.DW {
+  color: #718ebf;
+}
+
+.BottomSection {
+  /* border: 1px solid green; */
+  margin-top: 10px;
+  height: 25rem;
+  display: flex;
+  gap: 10px;
+}
+
+.BottomSec_1 {
+  /* border: #062170 1px solid; */
+  display: flex;
+  height: 100%;
+  flex: 4;
+  flex-direction: column;
+}
+
+.BottomSec_2 {
+  /* border: 1px solid red; */
+  display: flex;
+  height: 100%;
+  flex: 5;
+  flex-direction: column;
+}
+
+.transferTop {
+  /* border: 1px solid red; */
+  flex: 1;
+  display: flex;
+}
+
+.transferBottom {
+  /* border: 1px solid rgb(190, 199, 190); */
+  flex: 5;
+  display: flex;
+  background-color: #f5f7fa;
+  border-radius: 20px;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.groupSec {
+  /* border:1px solid grey; */
+  display: flex;
+  flex: 2;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  margin-left: 2rem;
+  padding: 20px;
+  border-radius: 50%;
+  border-style: none;
+  box-shadow: 2px 2px 10px 2px rgb(204, 201, 201);
+  /* box-shadow: 2px 2px 10px 2px rgb(178, 222, 239); */
+  cursor: pointer;
+}
+
+.imgSec {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.AmountSec {
+  /* border:1px solid rgb(94, 75, 75); */
+  display: flex;
+  flex: 1;
+  padding: 0px 10px;
+  align-items: center;
+}
+
+.list {
+  /* border: 1px solid firebrick; */
+  padding: 15px 0px;
+  align-items: center;
+  display: flex;
+}
+
+.WriteSec {
+  background-color: rgb(251, 247, 247);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.writeMsg {
+  /* background-color: #16dbcc; */
+  font-size: larger;
+  color: #64686f;
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.price_1 {
+  display: flex;
+}
+
+.Amount {
+  color: #718ebf;
+  /* border: 1px solid black; */
+  font-size: larger;
+  font-size: larger;
+  align-items: center;
+  display: flex;
+  padding: 10px 15px;
+  border-radius: 20px;
+  /* position: relative; */
+  width: 130px;
+  border-style: none;
+}
+
+.Amount:focus {
+  outline: none;
+}
+
+.send {
+  /* border: 1px solid black; */
+  font-size: larger;
+  padding: 10px 45px;
+  background-color: blue;
+  border-radius: 20px;
+  position: relative;
+  right: 35px;
+  color: white;
+  border-style: none;
+  cursor: pointer;
+}
+
+.balHistory {
+  /* border: 1px solid green; */
+  display: flex;
+  flex: 1;
+}
+
+.lineGraph {
+  /* border: 1px solid rgb(173, 171, 171); */
+  background-color: white;
+  display: flex;
+  flex: 5;
+  border-radius: 5%;
+  /* box-shadow: 1px 1px 1px 1px; */
+  padding: 10px;
+}
+
+.expenseStatics {
+  /* border: 1px solid black; */
+  margin-bottom: 35px;
+}
+
+.expenseStaticsGraph {
+  /* border: 1px solid rgb(195, 156, 156); */
+  /* flex:5; */
+
+  width: 100%;
+  height: 90%;
+  justify-content: center;
+  display: flex;
+  background-color: white;
+  /* padding-bottom: 15px; */
+  border-radius: 20px;
+  align-items: center;
+}
+
+/* .TransactionPageSection {
+  border: 1px solid lawngreen;
+  width: 86.5vw;
+ 
+} */

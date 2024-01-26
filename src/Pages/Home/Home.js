@@ -1,5 +1,5 @@
 import React from "react";
-import Dashboard_Content from "../../Component/Dashboard_Content/Dashboard_Content";
+// import Dashboard_Content from "../../Component/Dashboard_Content/Dashboard_Content";
 
 const Home = () => {
   return <div>Home</div>;

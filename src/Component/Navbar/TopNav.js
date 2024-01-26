@@ -5,11 +5,11 @@ import Setting_Symbol from "../../Images/Setting_Symbol.png";
 import bell_icon from "../../Images/bell_icon.png";
 
 const TopNav = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [searchQuery, setSearchQuery] = useState("");
 
-  const handleSearch = (e) => {
-    setSearchQuery(e.target.value);
-  };
+  // const handleSearch = (e) => {
+  //   setSearchQuery(e.target.value);
+  // };
 
   return (
     <div className="TopNav">

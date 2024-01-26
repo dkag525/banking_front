@@ -10,15 +10,16 @@ body {
 }
 
 .TopNav {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   flex-direction: row;
   padding: 5px 15px;
   height: 75px;
+  box-shadow: 1px 1px 10px 2px #c6cdd8;
 }
 
 .NavChild {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   align-items: center;
 }
@@ -62,7 +63,7 @@ body {
 }
 
 .RightPanelTopNav {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: end;
 }
@@ -92,6 +93,7 @@ body {
 
 .Bell_Icon_Image {
   width: 35px;
+  cursor: pointer;
 }
 
 .Profile_Picture {
@@ -131,4 +133,56 @@ body {
   .topnavChildC {
     display: none;
   }
+}
+
+/* ..........Here from Start SideNav Css ........ */
+
+.SideNavContainer {
+  /* border: 1px solid yellow; */
+  display: flex;
+}
+
+.mainContainer {
+  border: 1px solid black;
+  width: calc(100vw - 190px);
+  padding: 20px;
+  background-color: #f5f7fa;
+}
+
+.SideNav {
+  /* border: 1px solid red; */
+  width: 190px;
+  height: 845px;
+  box-shadow: 1px 1px 10px 2px #c6cdd8;
+}
+
+.Sidebox1 {
+  border: 1px solid black;
+
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.leftBoarder {
+  /* border-right: 4px solid blue; */
+  height: 57px;
+  width: 5px;
+  border-radius: 5px;
+}
+.rightBoarder {
+  border-right: 4px solid blue;
+  height: 57px;
+  width: 5px;
+  border-radius: 5px;
+}
+
+.SidebarMenu {
+  color: #b1b1b1;
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
 }

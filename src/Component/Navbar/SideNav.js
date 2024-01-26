@@ -1,336 +1,113 @@
 import React, { useState } from "react";
 import Photo from "../../Photo/Photo";
-// import { useNavigate } from "react-router-dom";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+let imageArray = [
+  {
+    id: 1,
+    route: "dashboard",
+    name: "Dashboard",
+    image: Photo.dashboard_icon,
+    imageblue: Photo.dashboard_blue_icon,
+  },
+  {
+    id: 2,
+    route: "transaction",
+    name: "Transaction",
+    image: Photo.transaction_icon,
+    imageblue: Photo.transaction_blue_icon,
+  },
+  {
+    id: 3,
+    route: "accounts",
+    name: "Accounts",
+    image: Photo.account_icon,
+    imageblue: Photo.accounts_blue_icon,
+  },
+  {
+    id: 4,
+    route: "investments",
+    name: "Investments",
+    image: Photo.investment_icon,
+    imageblue: Photo.investment_blue_icon,
+  },
+  {
+    id: 5,
+    route: "creditcards",
+    name: "Credit Cards",
+    image: Photo.credit_card_icon,
+    imageblue: Photo.credit_card_blue_icon,
+  },
+  {
+    id: 6,
+    route: "loans",
+    name: "Loans",
+    image: Photo.loan_icon,
+    imageblue: Photo.loan_blue_icon,
+  },
+  {
+    id: 7,
+    route: "services",
+    name: "Services",
+    image: Photo.service_icon,
+    imageblue: Photo.services_blue_icon,
+  },
+  {
+    id: 8,
+    route: "myprivileges",
+    name: "My Privileges",
+    image: Photo.myPrivileges_icon,
+  },
+  {
+    id: 9,
+    route: "setting",
+    name: "Setting",
+    image: Photo.setting_icon,
+    // imageblue: setting_blue_icon,
+  },
+];
 
 const SideNav = () => {
   const navigate = useNavigate();
+  // const [blueImage, setBlueImage] = useState("");
 
-  const [isselected, setIsSelected] = useState("Dashboard");
+  const handleclick = (item) => {
+    console.log(item);
 
-  const handleClicked = (param) => {
-    setIsSelected(param);
-    if (isselected === "Dashboard") {
+    if (item.route === "dashboard") {
       navigate("/");
-    } else if (isselected === "Transaction") {
+    } else if (item.route === "transaction") {
       navigate("/transaction");
-    } else if (isselected === "Accounts") {
+    } else if (item.route === "accounts") {
       navigate("/accounts");
-    } else if (isselected === "investments") {
-      navigate("/investment");
-    } else if (isselected === "credit") {
+    } else if (item.route === "investments") {
+      navigate("/investments");
+    } else if (item.route === "creditcards") {
       navigate("/credit_card");
-    } else if (isselected === "loan") {
+    } else if (item.route === "loans") {
       navigate("/loans");
-    } else if (isselected === "services") {
+    } else if (item.route === "services") {
       navigate("/services");
-    } else if (isselected === "Setting") {
+    } else if (item.route === "setting") {
       navigate("/settings");
     }
   };
 
   return (
     <div className="SideNav">
-      {/* new Line  */}
-      {isselected === "Dashboard" ? (
+      {imageArray.map((item) => (
         <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("Dashboard")}
+          onClick={() => handleclick(item)}
+          key={item.id}
+          className="Sidebox1"
         >
-          <div className="sidebars"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.dashboard_blue_icon}
-              alt="dashboard_blue_icon"
-            />
-            <Link to="/" style={{ color: "#2D60FF" }}>
-              Dashboard
-            </Link>
-          </div>
+          <div className="leftBoarder"></div>
+          <img src={item.image} alt={`${item.name}_icon`} />
+          <h4 className="SidebarMenu">{item.name}</h4>
         </div>
-      ) : (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("Dashboard")}
-        >
-          <div className="sidebar"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.dashboard_icon}
-              alt="dashboard_icon"
-            />
-            <p>Dashboard</p>
-          </div>
-        </div>
-      )}
-      {/* new Line  */}
-      {isselected === "Transaction" ? (
-        <div
-          // to={"/transaction"}
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("Transaction")}
-        >
-          <div className="sidebars"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.transaction_blue_icon}
-              alt="transaction_blue_icon"
-            />
-            <p style={{ color: "#2D60FF" }}>Transaction</p>
-          </div>
-        </div>
-      ) : (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("Transaction")}
-        >
-          <div className="sidebar"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.transaction_icon}
-              alt="transaction_icon"
-            />
-            <p>Transaction</p>
-          </div>
-        </div>
-      )}
-      {/* new Line  */}
-      {isselected === "Accounts" ? (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("Accounts")}
-        >
-          <div className="sidebars"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.accounts_blue_icon}
-              alt="accounts_blue_icon"
-            />
-            <p style={{ color: "#2D60FF" }}>Accounts</p>
-          </div>
-        </div>
-      ) : (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("Accounts")}
-        >
-          <div className="sidebar"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.account_icon}
-              alt="accounts_icon"
-            />
-            <p>Accounts</p>
-          </div>
-        </div>
-      )}
-      {/* new Line  */}
-
-      {isselected === "investments" ? (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("investments")}
-        >
-          <div className="sidebars"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.investment_blue_icon}
-              alt="investment_blue_icon"
-            />
-            <p style={{ color: "#2D60FF" }}>Investments</p>
-          </div>
-        </div>
-      ) : (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("investments")}
-        >
-          <div className="sidebar"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.investment_icon}
-              alt="investment_icon"
-            />
-            <p>Investments</p>
-          </div>
-        </div>
-      )}
-
-      {/* new Line  */}
-
-      {isselected === "credit" ? (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("credit")}
-        >
-          <div className="sidebars"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.credit_card_blue_icon}
-              alt="credit_card_blue_icon"
-            />
-            <p style={{ color: "#2D60FF" }}>Credit Cards</p>
-          </div>
-        </div>
-      ) : (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("credit")}
-        >
-          <div className="sidebar"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.credit_card_icon}
-              alt="credit_card_icon"
-            />
-            <p>Credit Cards</p>
-          </div>
-        </div>
-      )}
-
-      {/* new Line  */}
-
-      {isselected === "loan" ? (
-        <div className="dashboardMainDiv" onClick={() => handleClicked("loan")}>
-          <div className="sidebars"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.loan_blue_icon}
-              alt="loan_blue_icon"
-            />
-            <p style={{ color: "#2D60FF" }}>Loans</p>
-          </div>
-        </div>
-      ) : (
-        <div className="dashboardMainDiv" onClick={() => handleClicked("loan")}>
-          <div className="sidebar"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.loan_icon}
-              alt="loan_icon"
-            />
-            <p>Loans</p>
-          </div>
-        </div>
-      )}
-
-      {/* new Line  */}
-
-      {isselected === "services" ? (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("services")}
-        >
-          <div className="sidebars"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.services_blue_icon}
-              alt="services_blue_icon"
-            />
-            <p style={{ color: "#2D60FF" }}>Services</p>
-          </div>
-        </div>
-      ) : (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("services")}
-        >
-          <div className="sidebar"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.service_icon}
-              alt="service_icon"
-            />
-            <p>Services</p>
-          </div>
-        </div>
-      )}
-
-      {/* new Line  */}
-
-      {isselected === "privileges" ? (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("privileges")}
-        >
-          <div className="sidebars"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.myPrivileges_icon}
-              alt="myPrivileges_icon"
-            />
-            <p style={{ color: "#2D60FF" }}>My Privileges</p>
-          </div>
-        </div>
-      ) : (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("privileges")}
-        >
-          <div className="sidebar"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.myPrivileges_icon}
-              alt="myPrivileges_icon"
-            />
-            <p>My Privileges</p>
-          </div>
-        </div>
-      )}
-
-      {/* new Line  */}
-
-      {isselected === "Setting" ? (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("Setting")}
-        >
-          <div className="sidebars"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.setting_blue_icon}
-              alt="setting_blue_icon"
-            />
-            <p style={{ color: "#2D60FF" }}>Setting</p>
-          </div>
-        </div>
-      ) : (
-        <div
-          className="dashboardMainDiv"
-          onClick={() => handleClicked("Setting")}
-        >
-          <div className="sidebar"></div>
-          <div className="dashboard">
-            <img
-              className="img dashboardImg"
-              src={Photo.setting_icon}
-              alt="setting_icon"
-            />
-            <p>Setting</p>
-          </div>
-        </div>
-      )}
-
-      {/* new Line  */}
+      ))}
     </div>
   );
 };
-
+// src={item.route === "transaction" ? item.imageblue : item.image}
 export default SideNav;
