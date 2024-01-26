@@ -8,24 +8,7 @@ const SideNav = () => {
 
   const handleclick = (item) => {
     console.log(item);
-
-    if (item.route === "dashboard") {
-      navigate("/");
-    } else if (item.route === "transaction") {
-      navigate("/transaction");
-    } else if (item.route === "accounts") {
-      navigate("/accounts");
-    } else if (item.route === "investments") {
-      navigate("/investments");
-    } else if (item.route === "creditcards") {
-      navigate("/credit_card");
-    } else if (item.route === "loans") {
-      navigate("/loans");
-    } else if (item.route === "services") {
-      navigate("/services");
-    } else if (item.route === "setting") {
-      navigate("/settings");
-    }
+    navigate(item.route);
   };
 
   return (
@@ -44,5 +27,5 @@ const SideNav = () => {
     </div>
   );
 };
-// src={item.route === "transaction" ? item.imageblue : item.image}
+// src={item.id === "transaction" ? item.imageblue : item.image}
 export default SideNav;

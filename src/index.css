@@ -168,17 +168,17 @@ body {
 }
 
 .leftBoarder {
-  /* border-right: 4px solid blue; */
-  height: 57px;
-  width: 5px;
-  border-radius: 5px;
-}
-.rightBoarder {
   border-right: 4px solid blue;
   height: 57px;
   width: 5px;
   border-radius: 5px;
 }
+/* .rightBoarder {
+  border-right: 4px solid blue;
+  height: 57px;
+  width: 5px;
+  border-radius: 5px;
+} */
 
 .SidebarMenu {
   color: #b1b1b1;
