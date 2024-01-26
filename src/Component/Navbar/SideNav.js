@@ -1,29 +1,32 @@
 import React, { useState } from "react";
-import iconfinder_1 from "../../Images/iconfinder_1.png";
-import account_icon from "../../Images/account_icon.png";
-import Chip_Card_1 from "../../Images/Chip_Card_1.png";
-import credit_card_icon from "../../Images/credit-card_icon.png";
-import dashboard_icon from "../../Images/dashboard_icon.png";
-import investment_icon from "../../Images/investment_icon.png";
-import loan_icon from "../../Images/loan_icon.png";
-import myPrivileges_icon from "../../Images/myPrivileges_icon.png";
-import service_icon from "../../Images/service_icon.png";
-import setting_icon from "../../Images/setting_icon.png";
-import transaction_icon from "../../Images/transaction_icon.png";
-import accounts_blue_icon from "../../ImagesBlue/accounts_blue_icon.png";
-import dashboard_blue_icon from "../../ImagesBlue/dashboard_blue_icon.png";
-import transaction_blue_icon from "../../ImagesBlue/transaction_blue_icon.png";
-import investment_blue_icon from "../../ImagesBlue/investment_blue_icon.png";
-import credit_card_blue_icon from "../../ImagesBlue/credit_card_blue_icon.png";
-import loan_blue_icon from "../../ImagesBlue/loan_blue_icon.png";
-import services_blue_icon from "../../ImagesBlue/services_blue_icon.png";
-import setting_blue_icon from "../../ImagesBlue/services_blue_icon.png";
+import Photo from "../../Photo/Photo";
+// import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const SideNav = () => {
+  const navigate = useNavigate();
+
   const [isselected, setIsSelected] = useState("Dashboard");
 
   const handleClicked = (param) => {
     setIsSelected(param);
+    if (isselected === "Dashboard") {
+      navigate("/");
+    } else if (isselected === "Transaction") {
+      navigate("/transaction");
+    } else if (isselected === "Accounts") {
+      navigate("/accounts");
+    } else if (isselected === "investments") {
+      navigate("/investment");
+    } else if (isselected === "credit") {
+      navigate("/credit_card");
+    } else if (isselected === "loan") {
+      navigate("/loans");
+    } else if (isselected === "services") {
+      navigate("/services");
+    } else if (isselected === "Setting") {
+      navigate("/settings");
+    }
   };
 
   return (
@@ -38,10 +41,12 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={dashboard_blue_icon}
+              src={Photo.dashboard_blue_icon}
               alt="dashboard_blue_icon"
             />
-            <p style={{ color: "#2D60FF" }}>Dashboard</p>
+            <Link to="/" style={{ color: "#2D60FF" }}>
+              Dashboard
+            </Link>
           </div>
         </div>
       ) : (
@@ -53,7 +58,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={dashboard_icon}
+              src={Photo.dashboard_icon}
               alt="dashboard_icon"
             />
             <p>Dashboard</p>
@@ -63,6 +68,7 @@ const SideNav = () => {
       {/* new Line  */}
       {isselected === "Transaction" ? (
         <div
+          // to={"/transaction"}
           className="dashboardMainDiv"
           onClick={() => handleClicked("Transaction")}
         >
@@ -70,7 +76,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={transaction_blue_icon}
+              src={Photo.transaction_blue_icon}
               alt="transaction_blue_icon"
             />
             <p style={{ color: "#2D60FF" }}>Transaction</p>
@@ -85,7 +91,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={transaction_icon}
+              src={Photo.transaction_icon}
               alt="transaction_icon"
             />
             <p>Transaction</p>
@@ -102,7 +108,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={accounts_blue_icon}
+              src={Photo.accounts_blue_icon}
               alt="accounts_blue_icon"
             />
             <p style={{ color: "#2D60FF" }}>Accounts</p>
@@ -117,7 +123,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={account_icon}
+              src={Photo.account_icon}
               alt="accounts_icon"
             />
             <p>Accounts</p>
@@ -135,7 +141,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={investment_blue_icon}
+              src={Photo.investment_blue_icon}
               alt="investment_blue_icon"
             />
             <p style={{ color: "#2D60FF" }}>Investments</p>
@@ -150,7 +156,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={investment_icon}
+              src={Photo.investment_icon}
               alt="investment_icon"
             />
             <p>Investments</p>
@@ -169,7 +175,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={credit_card_blue_icon}
+              src={Photo.credit_card_blue_icon}
               alt="credit_card_blue_icon"
             />
             <p style={{ color: "#2D60FF" }}>Credit Cards</p>
@@ -184,7 +190,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={credit_card_icon}
+              src={Photo.credit_card_icon}
               alt="credit_card_icon"
             />
             <p>Credit Cards</p>
@@ -200,7 +206,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={loan_blue_icon}
+              src={Photo.loan_blue_icon}
               alt="loan_blue_icon"
             />
             <p style={{ color: "#2D60FF" }}>Loans</p>
@@ -210,7 +216,11 @@ const SideNav = () => {
         <div className="dashboardMainDiv" onClick={() => handleClicked("loan")}>
           <div className="sidebar"></div>
           <div className="dashboard">
-            <img className="img dashboardImg" src={loan_icon} alt="loan_icon" />
+            <img
+              className="img dashboardImg"
+              src={Photo.loan_icon}
+              alt="loan_icon"
+            />
             <p>Loans</p>
           </div>
         </div>
@@ -227,7 +237,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={services_blue_icon}
+              src={Photo.services_blue_icon}
               alt="services_blue_icon"
             />
             <p style={{ color: "#2D60FF" }}>Services</p>
@@ -242,7 +252,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={service_icon}
+              src={Photo.service_icon}
               alt="service_icon"
             />
             <p>Services</p>
@@ -261,7 +271,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={myPrivileges_icon}
+              src={Photo.myPrivileges_icon}
               alt="myPrivileges_icon"
             />
             <p style={{ color: "#2D60FF" }}>My Privileges</p>
@@ -276,7 +286,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={myPrivileges_icon}
+              src={Photo.myPrivileges_icon}
               alt="myPrivileges_icon"
             />
             <p>My Privileges</p>
@@ -295,7 +305,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={setting_blue_icon}
+              src={Photo.setting_blue_icon}
               alt="setting_blue_icon"
             />
             <p style={{ color: "#2D60FF" }}>Setting</p>
@@ -310,7 +320,7 @@ const SideNav = () => {
           <div className="dashboard">
             <img
               className="img dashboardImg"
-              src={setting_icon}
+              src={Photo.setting_icon}
               alt="setting_icon"
             />
             <p>Setting</p>

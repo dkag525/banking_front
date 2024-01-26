@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import iconfinder_1 from "../../Images/iconfinder_1.png";
+import Photo from "../../Photo/Photo";
 import magnifyglass from "../../SVG/magnifyglass.svg";
 import Setting_Symbol from "../../Images/Setting_Symbol.png";
 import bell_icon from "../../Images/bell_icon.png";
-import profile_picture from "../../Images/profile_picture.png";
 
 const TopNav = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -14,48 +13,52 @@ const TopNav = () => {
 
   return (
     <div className="TopNav">
-      <div className="Navbar">
-        <div className="bankdashimg">
-          <img src={iconfinder_1} alt="iconfinder_1" />
-          <h3 className="BankDash">BankDash.</h3>
+      <div className="topnavChildA NavChild">
+        <div className="Iconfinder_logo">
+          <img
+            className="Iconfinder_image"
+            src={Photo.iconfinder_1}
+            alt="Iconfinder_logo"
+          />
         </div>
-        <div className="Navbar_1">
-          <div className="OverView">
-            <h2>OverView</h2>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              // border: "1px solid black",
-              width: "100%",
-              alignItems: "center",
-              justifyContent: "end",
-              gap: "15px",
-              // flexWrap: "wrap",
-            }}
-          >
-            <div className="Searchbar">
-              <i>
-                <img src={magnifyglass} alt="magnifyglass" />
-              </i>
-              <input
-                onChange={handleSearch}
-                className="input"
-                type="text"
-                placeholder="Search for something"
-                value={searchQuery}
-              />
-            </div>
-            <div>
-              <img src={Setting_Symbol} alt="Setting_Symbol" />
-            </div>
-            <div>
-              <img src={bell_icon} alt="bell_icon" />
-            </div>
-            <div>
-              <img src={profile_picture} alt="profile_picture" />
-            </div>
-          </div>
+        <h1 className="BankDash">BankDash.</h1>
+      </div>
+      <div className="topnavChildB NavChild">
+        <h6 className="heading">Overview</h6>
+      </div>
+      <div className="topnavChildC NavChild">
+        <div className="SearchBar RightPanelTopNav">
+          <img
+            className="magnifyglass_Image"
+            src={magnifyglass}
+            alt="magnifyglass"
+          />
+          <input
+            className="Input"
+            type="text"
+            placeholder="Search For SomeThing"
+          />
+        </div>
+        <div className="Setting_icon RightPanelTopNav">
+          <img
+            className="Setting_Icon_image"
+            src={Photo.Setting_Symbol}
+            alt="Setting_icon"
+          />
+        </div>
+        <div className="Bell_Icon RightPanelTopNav">
+          <img
+            className="Bell_Icon_Image"
+            src={Photo.bell_icon}
+            alt="Bell_Icon"
+          />
+        </div>
+        <div className="Profile_Picture RightPanelTopNav">
+          <img
+            className="Profile_Image"
+            src={Photo.profile_picture}
+            alt="Profile_Image"
+          />
         </div>
       </div>
     </div>
