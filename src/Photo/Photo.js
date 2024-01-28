@@ -22,6 +22,8 @@ const Photo = {
   bell_icon: require("../Images/bell_icon.png"),
   Setting_Symbol: require("../Images/Setting_Symbol.png"),
   magnifyglass: require("../SVG/magnifyglass.svg"),
+  MenuBar: require("../Images/MenuBar.png"),
+  cross: require("../Images/cross.png"),
 };
 
 export default Photo;

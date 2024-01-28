@@ -31,7 +31,7 @@ let imageArray = [
   },
   {
     id: 5,
-    route: "/creditcards",
+    route: "/credit_card",
     name: "Credit Cards",
     image: Photo.credit_card_icon,
     imageblue: Photo.credit_card_blue_icon,
@@ -58,10 +58,10 @@ let imageArray = [
   },
   {
     id: 9,
-    route: "/setting",
+    route: "/settings",
     name: "Setting",
     image: Photo.setting_icon,
-    // imageblue: setting_blue_icon,
+    imageblue: Photo.setting_blue_icon,
   },
 ];
 

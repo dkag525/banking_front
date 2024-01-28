@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import Photo from "../../Photo/Photo";
 import magnifyglass from "../../SVG/magnifyglass.svg";
-import Setting_Symbol from "../../Images/Setting_Symbol.png";
-import bell_icon from "../../Images/bell_icon.png";
 
 const TopNav = () => {
-  // const [searchQuery, setSearchQuery] = useState("");
+  const [menuBarList, SetMenuBarList] = useState(true);
 
+  // console.log(menuBarList);
   // const handleSearch = (e) => {
   //   setSearchQuery(e.target.value);
   // };
 
+  const onMenuclick = () => {
+    SetMenuBarList(!menuBarList);
+  };
+
   return (
-    <div className="TopNav">
+    <div className={menuBarList === true ? "TopNav" : "TopNav1"}>
       <div className="topnavChildA NavChild">
         <div className="Iconfinder_logo">
           <img
@@ -25,6 +28,29 @@ const TopNav = () => {
       </div>
       <div className="topnavChildB NavChild">
         <h6 className="heading">Overview</h6>
+      </div>
+      <div
+        className={menuBarList === true ? "MenuShortList" : "MenuShortList1"}
+      >
+        <input
+          className="Input InputM"
+          type="text"
+          placeholder="Search"
+          style={{
+            width: "100px",
+            height: "",
+            backgroundColor: "#a7a1a1",
+            padding: "4px 25px",
+          }}
+        />
+        <p className="MenuShortListItem">Setting</p>
+        <p className="MenuShortListItem">Notification</p>
+        <img
+          className="MenuShortListItem"
+          src={Photo.profile_picture}
+          alt="ProfilePicture"
+          style={{ width: "50px" }}
+        />
       </div>
       <div className="topnavChildC NavChild">
         <div className="SearchBar RightPanelTopNav">
@@ -60,6 +86,25 @@ const TopNav = () => {
             alt="Profile_Image"
           />
         </div>
+      </div>
+      <div className="MenuBar">
+        {menuBarList === true ? (
+          <img
+            className="ImageMenuBar "
+            src={Photo.MenuBar}
+            alt="ImageMenuBar"
+            name="menu-outline"
+            onClick={onMenuclick}
+          />
+        ) : (
+          <img
+            className="ImageCrossBar "
+            src={Photo.cross}
+            alt="ImageCrossBar"
+            name="close-outline"
+            onClick={onMenuclick}
+          />
+        )}
       </div>
     </div>
   );
