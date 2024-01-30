@@ -643,6 +643,7 @@ body {
   border: 1px solid rgb(10, 9, 9);
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .TransferPersondetails{
@@ -713,4 +714,12 @@ body {
   display: flex;
   flex:2;
   border: 1px solid red;
+}
+
+
+@media (max-width: 600px) {
+  .TransferPersonImage{
+    width: 50px;
+  }
+ 
 }
