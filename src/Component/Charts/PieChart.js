@@ -40,12 +40,12 @@ export const options = {
       align: "end", // Alignment of the values inside the pie chart
 
       font: {
-        size: 14,
+        size: 10,
         // weight: "bolder",
         // family: "mono",
       }, // Font size for the values
-      offset: -25, // Offset from the data point
-      rotation: 10, // Rotation angle in degrees
+      offset: -15, // Offset from the data point
+      rotation: 15, // Rotation angle in degrees
       clamp: true, // Ensure labels do not overflow
       formatter: (value, context) => {
         return [context.chart.data.labels[context.dataIndex], value + "%"];

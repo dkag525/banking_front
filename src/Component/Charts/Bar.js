@@ -39,8 +39,8 @@ export const options = {
     },
   },
   maintainAspectRatio: false, // Add this line to allow setting width and height directly
-  width: 100, // Set the width of the chart
-  // height: 400, // Set the height of the chart
+  // width: 100, // Set the width of the chart
+  // height: 500, // Set the height of the chart
 };
 
 const labels = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
@@ -74,5 +74,11 @@ export const data = {
 };
 
 export function BarChart() {
-  return <Bar options={options} data={data} />;
+  return (
+    <Bar
+      style={{ height: "250px", width: "100%" }}
+      options={options}
+      data={data}
+    />
+  );
 }
