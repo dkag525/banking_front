@@ -37,6 +37,7 @@ const Photo = {
   Group5_icon: require("../Images/group_5.jpg"),
   Group6_icon: require("../Images/group_6.jpg"),
   Vector1_icon: require("../Images/Vector1_icon.png"),
+  Vector_icon: require("../Images/Vector.png"),
 };
 
 export default Photo;

@@ -4,6 +4,7 @@ import Photo from "../../Photo/Photo";
 import TransactionHistory from "../../TransactionHistory/TransactionHistory";
 import Graph from "../../Component/Graph/Graph";
 import TransferHistory from "../../TransactionHistory/TranserferHistory";
+import { LineChart } from "../../Component/Charts/LineChart";
 
 const Home = () => {
   // const CardStyle1 = {
@@ -145,9 +146,32 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="Transfer_Amount">B</div>
+          <div className="Transfer_Amount">
+            <div className="writeAmount">
+              <p>Write Amount</p>
+            </div>
+            <div className="send_amount_section">
+              <div className="Amount">
+                <input
+                  className="InputAmount"
+                  type="text"
+                  placeholder="525.50"
+                />
+              </div>
+              <button className="send">
+                <p>Send</p>
+                <img
+                  className="Vector_icon"
+                  src={Photo.Vector_icon}
+                  alt="Vector_icon"
+                />
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="balanceHistorySec">Z</div>
+        <div className="balanceHistorySec">
+          <LineChart />
+        </div>
       </div>
     </div>
   );

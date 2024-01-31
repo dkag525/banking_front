@@ -10,7 +10,7 @@ body {
 }
 
 .TopNav {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   flex-direction: row;
   padding: 5px 15px;
@@ -114,7 +114,7 @@ body {
 }
 
 .Iconfinder_logo {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
 }
@@ -166,7 +166,7 @@ body {
 } */
 
 .MenuShortList{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,7 +177,7 @@ body {
 }
 
 .MenuShortList1{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,7 +230,7 @@ body {
 }
 
 .mainContainer {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: calc(100vw - 190px);
   padding: 20px;
   background-color: #f5f7fa;
@@ -239,12 +239,13 @@ body {
 .SideNav {
   /* border: 1px solid red; */
   width: 190px;
-  height: 845px;
+  flex: 1;
+  /* height: 900px; */
   box-shadow: 1px 1px 10px 2px #c6cdd8;
 }
 
 .Sidebox1 {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
   height: 60px;
   display: flex;
@@ -304,7 +305,7 @@ body {
 
 
 .dashboardPage{
-  border: 1px solid green;
+  /* border: 1px solid green; */
   height: 100%;
   background-color: #f7f2f2;
 }
@@ -316,7 +317,7 @@ body {
 }
 .headSec1{
   flex: 2;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -346,7 +347,7 @@ body {
 .headSec2{
   flex: 1.10;
   display: flex;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   justify-content: end;
   font-family: "Inter", sans-serif;
   font-family: "Lato", sans-serif;
@@ -357,7 +358,7 @@ body {
 }
 
 .AtmCardSec{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -365,7 +366,7 @@ body {
 }
 
 .card {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   flex:1;
   /* height: 13rem; */
   border-radius: 40px;
@@ -524,7 +525,7 @@ body {
 ========================================================== */
 
 .WeeklyActivitySec{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -534,7 +535,7 @@ body {
 .GraphBarSec{
  display: flex;
  flex:2.03;
- border: 1px solid green;
+ /* border: 1px solid green; */
  padding: 15px;
  border-radius: 40px;
  flex-direction: column;
@@ -544,7 +545,7 @@ body {
 .GraphPieSec{
  display: flex;
  flex:1;
- border: 1px solid green;
+ /* border: 1px solid green; */
  padding: 15px;
  border-radius: 30px;
  background-color: white;
@@ -558,7 +559,7 @@ body {
 .diposit{
   display: flex;
   justify-content: end;
-  border:1px solid yellow;
+  /* border:1px solid yellow; */
   gap:35px;
   flex-wrap: wrap;
 
@@ -566,7 +567,7 @@ body {
 
 .withdraw{
   display: flex;  
-  border:1px solid pink
+  /* border:1px solid pink */
 }
 
 .dipositeGreen{
@@ -628,31 +629,36 @@ body {
 
 .quickTransferSec{
   display: flex;
-  border: 2px solid rgb(138, 128, 128);
+  /* border: 2px solid rgb(138, 128, 128); */
   gap:10px;
   padding: 15px;
+  
 }
 .quickTransfer{
   display: flex;
   flex:1.7;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   flex-direction: column;
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 25px;
 }
 .Transfer_History{
   display: flex;
-  border: 1px solid rgb(10, 9, 9);
+  /* border: 1px solid rgb(10, 9, 9); */
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .TransferPersondetails{
-  border: 1px solid rgb(205, 15, 243);
+  /* border: 1px solid rgb(205, 15, 243); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   line-height: 19.36px;
+  flex-wrap: wrap;
   
 }
 
@@ -707,19 +713,121 @@ body {
 
 .Transfer_Amount{
   display: flex;
-  
+  justify-content: space-between;
+  /* border: 2px solid forestgreen; */
+  padding: 10px 45px 10px 75px;
+  margin-top: 15px;
+  align-items: center;
+  flex-wrap: wrap;
 }
+
+.writeAmount{
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  color: #718EBF;
+}
+
+.send_amount_section{
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+}
+
+.Amount{
+
+}
+
+.InputAmount{
+  padding: 10px 10px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 160px;
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  border-style: none;
+  background-color: #d4d8dd;
+}
+
+.InputAmount::placeholder{
+  color: #718EBF;
+  opacity: none;;
+}
+.InputAmount:focus{
+  outline: none;
+}
+
+.send{
+  cursor: pointer;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap:10px ;
+  background-color: #2d60ff;
+  border-radius: 40px;
+  border-style: none;
+  position: relative;
+  right: 45px;
+  width: 110px;
+  color: white;
+  font-size: 16px;
+  justify-content: center;
+}
+
+
+
+
 
 .balanceHistorySec{
   display: flex;
   flex:2;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  background-color: white;
+  border-radius: 40px;
+  padding-top: 25px;
 }
+
+
+
+
+
+
 
 
 @media (max-width: 600px) {
   .TransferPersonImage{
     width: 50px;
   }
- 
+  .Transfer_Amount {
+    padding: 0px;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .VictorSign{
+    height: 10px;
+    width: 10px; 
+  }
+  .VictorImage{
+    width: 10px;
+  }
+  .send{
+   padding: 0px;
+   font-size: 12px;
+   position: relative;
+    right: 0px;
+  }
+  .Vector_icon{
+    width: 10px;
+  }
+  .writeAmount{
+    font-size: 10px;
+  }
+  .InputAmount{
+    padding: 0px;
+    width: 80px;
+  }
+  .send_amount_section{
+    justify-content: center;
+  }
 }
