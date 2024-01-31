@@ -8,13 +8,15 @@ import { LineChart } from "../../Component/Charts/LineChart";
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [newTransferHistory, setNewTransferHistory] = useState([]); //012
+  const [newTransferHistory, setNewTransferHistory] = useState([
+    ...TransferHistory.slice(currentIndex, currentIndex + 3),
+  ]);
 
   console.log("newTransferHistory", newTransferHistory);
   console.log("currentIndex", currentIndex);
 
   const handleNextClick = () => {
-    const newHistory = TransferHistory.slice(currentIndex, currentIndex + 3); //012,
+    const newHistory = TransferHistory.slice(currentIndex, currentIndex + 3);
     if (currentIndex <= TransferHistory.length - 1) {
       setNewTransferHistory(() => [...newHistory]);
       setCurrentIndex(() => currentIndex + 3);
