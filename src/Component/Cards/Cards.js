@@ -9,60 +9,35 @@ const Cards = ({
   atmcardnumber,
 }) => {
   const [color, setColor] = useState("");
-
   const [newColor, setNewColor] = useState("");
-
   const [newColors, setNewColors] = useState("");
-
   const [newColornumber, setNewColornumber] = useState("");
 
-  useEffect(() => {
-    const ATMCardColor = () => {
-      if (backgroundcolor === "backgroundcolorblue") {
-        setColor("AtmCardfrontSide");
-      } else if (backgroundcolor === "backgroundcolorwhite") {
-        setColor("AtmCardbackSide");
-      }
-    };
+  useEffect(() =>
+    setColor(
+      backgroundcolor === "backgroundcolorblue"
+        ? "AtmCardfrontSide"
+        : "AtmCardbackSide",
+      [backgroundcolor]
+    )
+  );
 
-    ATMCardColor();
-  }, [backgroundcolor]);
+  useEffect(() =>
+    setNewColor(cardname === "white" ? "bal-top" : "bal-tops", [cardname])
+  );
 
-  useEffect(() => {
-    const ATMCardColors = () => {
-      if (cardname === "white") {
-        setNewColor("bal-top");
-      } else if (cardname === "black") {
-        setNewColor("bal-tops");
-      }
-    };
+  useEffect(() =>
+    setNewColors(balmiddle === "white" ? "bal-middle" : "bal-middles", [
+      balmiddle,
+    ])
+  );
 
-    ATMCardColors();
-  }, [cardname]);
-
-  useEffect(() => {
-    const ATMCardColorss = () => {
-      if (balmiddle === "white") {
-        setNewColors("bal-middle");
-      } else if (balmiddle === "black") {
-        setNewColors("bal-middles");
-      }
-    };
-
-    ATMCardColorss();
-  }, [balmiddle]);
-
-  useEffect(() => {
-    const ATMCardColorsss = () => {
-      if (atmcardnumber === "blue") {
-        setNewColornumber("ATM-Card-Number");
-      } else if (atmcardnumber === "white") {
-        setNewColornumber("ATM-Card-Numbers");
-      }
-    };
-
-    ATMCardColorsss();
-  }, [atmcardnumber]);
+  useEffect(() =>
+    setNewColornumber(
+      atmcardnumber === "blue" ? "ATM-Card-Number" : "ATM-Card-Numbers",
+      [atmcardnumber]
+    )
+  );
 
   return (
     <>
