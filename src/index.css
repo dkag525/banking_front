@@ -381,8 +381,15 @@ body {
   gap: 15px;
 }
 
+
+
+
 .AtmCardbackSide{
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 .Card-Holder-Name{
@@ -402,6 +409,11 @@ body {
   font-family: "Inter", sans-serif;
   font-family: "Lato", sans-serif;
 }
+.bal-tops p{
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+}
 
 .bal1{
   font-size: small;
@@ -416,6 +428,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+.bal-middles {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .bal-middle p{
   display: flex;
   flex-direction: column;
@@ -423,7 +441,20 @@ body {
   font-family: "Inter", sans-serif;
   font-family: "Lato", sans-serif;
 }
+
+.bal-middles p{
+  display: flex;
+  flex-direction: column;
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+}
+
 .bal-middle .bal3 {
+   font-size: small;
+   font-weight: 300;
+}
+.bal-middles .bal3 {
    font-size: small;
    font-weight: 300;
 }
@@ -440,6 +471,20 @@ body {
   background-color: #416df3;
   border-radius: 40px;
   box-shadow: 0px 0px 1px 1px #697ee7;
+  flex-wrap: wrap;
+}
+.ATM-Card-Numbers{
+  display: flex;
+  justify-content: center;
+  font-size:x-large;
+  justify-content: space-between;
+  font-family: "Inter", sans-serif;
+  font-family: "Lato", sans-serif;
+  color: black;
+  padding: 1rem 0rem;
+  background-color: white;
+  border-radius: 40px;
+  box-shadow: 0px 0px 1px 1px #edeff7;
   flex-wrap: wrap;
 }
 

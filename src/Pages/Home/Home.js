@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Cards from "../../Component/Cards/Cards";
 import Photo from "../../Photo/Photo";
 import TransactionHistory from "../../TransactionHistory/TransactionHistory";
@@ -7,6 +7,20 @@ import TransferHistory from "../../TransactionHistory/TranserferHistory";
 import { LineChart } from "../../Component/Charts/LineChart";
 
 const Home = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [newTransferHistory, setNewTransferHistory] = useState([]); //012
+
+  console.log("newTransferHistory", newTransferHistory);
+  console.log("currentIndex", currentIndex);
+
+  const handleNextClick = () => {
+    const newHistory = TransferHistory.slice(currentIndex, currentIndex + 3); //012,
+    if (currentIndex <= TransferHistory.length - 1) {
+      setNewTransferHistory(() => [...newHistory]);
+      setCurrentIndex(() => currentIndex + 3);
+    }
+  };
+
   // const CardStyle1 = {
   //   backgroundColor: "#2d60ff",
   //   display: "flex",
@@ -49,10 +63,21 @@ const Home = () => {
 
       <div className="AtmCardSec">
         <Cards
+          atmcardnumber="blue"
+          balmiddle="white"
+          cardname="white"
           CircleImage={Photo.CircleWhite}
           CardImage={Photo.Chip_Card_White}
+          backgroundcolor="backgroundcolorblue"
         />
-        <Cards CircleImage={Photo.CircleBlack} CardImage={Photo.Chip_Card_1} />
+        <Cards
+          atmcardnumber="white"
+          balmiddle="black"
+          cardname="black"
+          backgroundcolor="backgroundcolorwhite"
+          CircleImage={Photo.CircleBlack}
+          CardImage={Photo.Chip_Card_1}
+        />
         <div className="AtmCardTransaction card">
           {TransactionHistory.map((transaction_history) => (
             <div
@@ -125,7 +150,7 @@ const Home = () => {
       <div className="quickTransferSec">
         <div className="quickTransfer">
           <div className="Transfer_History">
-            {TransferHistory.map((TransferHistorys) => (
+            {newTransferHistory.map((TransferHistorys) => (
               <div key={TransferHistorys.id} className="TransferPersondetails">
                 <img
                   className="TransferPersonImage"
@@ -138,7 +163,7 @@ const Home = () => {
                 </p>
               </div>
             ))}
-            <div className="VictorSign">
+            <div className="VictorSign" onClick={handleNextClick}>
               <img
                 className="VictorImage"
                 src={Photo.Vector1_icon}
