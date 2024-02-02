@@ -36,8 +36,8 @@ export const options = {
     },
   },
   maintainAspectRatio: false, // Set this to false to allow custom width and height
-  width: 100, // Set the width of the chart
-  height: 300, // Set the height of the chart
+  // width: 100, // Set the width of the chart
+  // height: 300, // Set the height of the chart
 };
 
 const labels = ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan"];
@@ -60,5 +60,11 @@ export const data = {
 };
 
 export function LineChart() {
-  return <Line options={options} data={data} />;
+  return (
+    <Line
+      style={{ width: "100%", height: "10rem" }}
+      options={options}
+      data={data}
+    />
+  );
 }

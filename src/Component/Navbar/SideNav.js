@@ -4,10 +4,10 @@ import imageArray from "../../ImageArray/imageArray";
 
 const SideNav = () => {
   const navigate = useNavigate();
-  // const [blueImage, setBlueImage] = useState("");
+  const [details, setDetails] = useState("");
 
   const handleclick = (item) => {
-    console.log(item);
+    setDetails(item.name);
     navigate(item.route);
   };
 
@@ -19,13 +19,18 @@ const SideNav = () => {
           key={item.id}
           className="Sidebox1"
         >
-          <div className="leftBoarder"></div>
-          <img src={item.image} alt={`${item.name}_icon`} />
+          <div
+            className={details === item.name ? "leftBoarder" : "rightBoarder"}
+          ></div>
+          <img
+            className="SideNavImage"
+            src={details === item.name ? item.imageblue : item.image}
+            alt={`${item.name}_icon`}
+          />
           <h4 className="SidebarMenu">{item.name}</h4>
         </div>
       ))}
     </div>
   );
 };
-// src={item.id === "transaction" ? item.imageblue : item.image}
 export default SideNav;
